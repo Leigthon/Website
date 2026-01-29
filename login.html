@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Leigthon Messina</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (same styling as main site) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="nav-logo">LM</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-wrapper">
+                <h1 class="section-title">Login</h1>
+                <h1 class="section-title2">Welcome Home Leigthon</h1>
+
+                <div class="auth-card">
+                    <form class="auth-form" id="login-form" autocomplete="on">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Password" required minlength="6">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-right-to-bracket"></i> Sign In
+                        </button>
+                        <p class="auth-help">
+                            This is a standalone login page (UI only). If you want this to actually protect a “Personal” area,
+                            tell me what you want behind login and where you’re hosting (GitHub Pages/Netlify/etc).
+                        </p>
+                        <p class="auth-status" id="auth-status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // UI-only login handler (prevents page refresh)
+        const form = document.getElementById('login-form');
+        const statusEl = document.getElementById('auth-status');
+        if (form && statusEl) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                statusEl.textContent = 'Login is not wired to a backend yet.';
+            });
+        }
+    </script>
+</body>
+</html>
