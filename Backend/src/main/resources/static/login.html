@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Leigthon Messina</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation (same styling as main site) -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html#home" class="nav-logo">LM</a>
+            <a href="/index.html#home" class="nav-logo">LM</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#home" class="nav-link">Home</a></li>
-                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="/index.html#home" class="nav-link">Home</a></li>
+                <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -33,7 +33,7 @@
                 <h1 class="section-title2">Welcome Home Leigthon</h1>
 
                 <div class="auth-card">
-                    <form class="auth-form" id="login-form" autocomplete="on">
+                    <form class="auth-form" id="login-form" action="" method="post" autocomplete="on">
                         <div class="form-group">
                             <input type="text" name="username" placeholder="Username" required>
                         </div>
@@ -53,40 +53,40 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
     <script>
-        // UI-only login handler (prevents page refresh)
         const form = document.getElementById('login-form');
         const statusEl = document.getElementById('auth-status');
-        if (form && statusEl) {
-            form.addEventListener('submit', (e) => {
 
+        (async function init() {
+            if (!form || !statusEl) return;
 
-                const username = form.username.value.trim();
-                const password = form.password.value;
+            try {
+                const res = await fetch('/api/csrf', { credentials: 'include' });
+                const data = await res.json();
 
-                // ── TEMPORARY client-side check (for testing only ─ NEVER do this in production)
-                if (username === 'Leigthon' && password === 'Leonie08!') {
-                    statusEl.style.color = 'var(--success, #22c55e)';
-                    statusEl.textContent = 'Login successful! Redirecting...';
+                const csrfInput = document.createElement('input');
+                csrfInput.type = 'hidden';
+                csrfInput.name = data.parameterName;
+                csrfInput.value = data.token;
+                form.appendChild(csrfInput);
 
-                    // Replace with your real protected page
-                    setTimeout(() => {
-                        window.location.href = "https://github.com/Leigthon/Website";  // ← change this
-                        // OR: window.location.replace("dashboard.html");  // no back button
-                    }, 80);
-                } else {
-                    statusEl.style.color = 'var(--danger, #ef4444)';
-                    statusEl.textContent = 'Invalid username or password';
-                    form.password.select(); // helpful UX
-                }
-               // e.preventDefault();
-               // statusEl.textContent = 'Login is not wired to a backend yet.';
-               
+                form.action = '/perform-login';
+            } catch (err) {
+                statusEl.textContent = 'Cannot reach server.';
+                return;
+            }
+
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('error')) {
+                statusEl.textContent = 'Invalid username or password.';
+                statusEl.style.color = '#ff6b6b';
+            }
+
+            form.addEventListener('submit', () => {
+                statusEl.textContent = 'Signing in...';
             });
-        }
-     
-
+        })();
     </script>
 </body>
 </html>

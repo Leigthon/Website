@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leigthon Messina | Junior Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">LM</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link" data-testid="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-testid="nav-about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-testid="nav-experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-testid="nav-projects">Projects</a></li>
+                <li><a href="#skills" class="nav-link" data-testid="nav-skills">Skills</a></li>
+                <li><a href="#contact" class="nav-link" data-testid="nav-contact">Contact</a></li>
+                <li>
+                    <a href="login.html" class="nav-link" data-testid="nav-personal">
+                        <i class="fas fa-user"></i> Personal
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger" data-testid="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" data-testid="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting" data-testid="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name" data-testid="hero-name">Leigthon Messina</h1>
+                <h2 class="hero-title" data-testid="hero-title">Junior Software Engineer</h2>
+                <p class="hero-description" data-testid="hero-description">
+                    Final-year Computer Science at UCT with hands-on experience at AWS. 
+                    Passionate about backend development, software engineering, and building scalable solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-testid="hero-contact-btn">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary" data-testid="hero-projects-btn">View Projects</a>
+                    <a href="CV 21-06-2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-testid="hero-cv-btn">
+                        <i class="fas fa-file-pdf"></i> View My CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation" data-testid="code-animation">
+                    <pre><code>class <span class="keyword">SoftwareEngineer</span> {
+  constructor() {
+    this.name = <span class="string">"Leigthon Messina"</span>;
+    this.role = <span class="string">"Junior Software Engineer"</span>;
+    this.location = <span class="string">"Cape Town, SA"</span>;
+  }
+  
+  getSkills() {
+    return [<span class="string">"Java"</span>, <span class="string">"Python"</span>, <span class="string">"React"</span>, <span class="string">"AWS"</span>];
+  }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-testid="scroll-indicator">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" data-testid="about-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="about-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-testid="about-text-1">
+                        I'm a final-year Computer Science and Computer Engineering student at the University of Cape Town, 
+                        with a strong foundation in backend development and software engineering principles.
+                    </p>
+                    <p data-testid="about-text-2">
+                        During my internship at Amazon Web Services (AWS) on the EC2 Dedicated Host Team, I contributed 
+                        production-quality backend code to internal tooling and participated in Agile development practices, 
+                        including sprint planning, code reviews, and design discussions.
+                    </p>
+                    <p data-testid="about-text-3">
+                        I'm known for quickly adapting to complex systems, writing maintainable code, and working effectively 
+                        in team-based engineering environments. Beyond software development, I've co-founded a tutoring 
+                        initiative and mentored first-year university students, demonstrating my commitment to knowledge 
+                        sharing and community building.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item" data-testid="about-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cape Town, South Africa</span>
+                        </div>
+                        <div class="info-item" data-testid="about-education">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>University of Cape Town</span>
+                        </div>
+                        <div class="info-item" data-testid="about-status">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Open to Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card" data-testid="stat-experience">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Months at AWS</div>
+                    </div>
+                    <div class="stat-card" data-testid="stat-projects">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card" data-testid="stat-languages">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience" data-testid="experience-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="experience-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-testid="experience-aws">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Development Intern</h3>
+                            <span class="timeline-date">June 2025 - August 2025</span>
+                        </div>
+                        <h4 class="company">Amazon Web Services (AWS)</h4>
+                        <p class="team">EC2 Dedicated Host Team</p>
+                        <ul class="responsibilities">
+                            <li>Contributed production-quality backend code to internal tooling supporting the EC2 Dedicated Host platform</li>
+                            <li>Assisted in designing and implementing new backend features to improve reliability and operational visibility</li>
+                            <li>Enhanced internal service components and developer-facing interfaces used by engineering teams</li>
+                            <li>Participated in Agile practices including sprint planning, stand-ups, code reviews, and design discussions</li>
+                            <li>Delivered code aligned with AWS engineering standards, security best practices, and maintainability guidelines</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-testid="experience-intellectus">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Co-Founder & Tutor</h3>
+                            <span class="timeline-date">April 2024 - November 2024</span>
+                        </div>
+                        <h4 class="company">Intellectus Academy</h4>
+                        <ul class="responsibilities">
+                            <li>Co-founded a tutoring initiative providing Mathematics, Physical Sciences, and Accounting support</li>
+                            <li>Delivered structured lessons and academic guidance to Grades 10-12 learners</li>
+                            <li>Developed teaching materials and strategies to improve student understanding and performance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-testid="experience-tutor">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Mathematics Tutor</h3>
+                            <span class="timeline-date">April 2024 - October 2024</span>
+                        </div>
+                        <h4 class="company">Rocklands High School</h4>
+                        <ul class="responsibilities">
+                            <li>Tutored Mathematics to classes of 30-40 Grade 8, 9, and 11 students</li>
+                            <li>Helped learners improve conceptual understanding and academic performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section 
+    <section id="projects" class="projects" data-testid="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="projects-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-testid="project-transportation">
+                    <div class="project-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Public Transportation Web Application</h3>
+                    <p class="project-description">
+                        Full-stack web application for public transportation management. Implemented backend services in Python 
+                        with RESTful APIs consumed by a React frontend, integrated with SQL database for data persistence.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                    <div class="project-date">August 2025 - October 2025</div>
+                </div>
+                <div class="project-card" data-testid="project-embedded">
+                    <div class="project-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Embedded Systems & Image Processing</h3>
+                    <p class="project-description">
+                        Developed embedded software in C for STM32 microcontrollers, implementing low-level functionality 
+                        involving hardware interaction. Completed image processing project in C++ focusing on data manipulation 
+                        and performance optimization.
+                    </p>
+                  <div class="project-card" data-testid="project-transportation">
+                    <div class="project-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>AWS intership project</h3>
+                    <p class="project-description">
+                        Full-stack web application for public transportation management. Implemented backend services in Python 
+                        with RESTful APIs consumed by a React frontend, integrated with SQL database for data persistence.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                    <div class="project-date">August 2025 - October 2025</div>
+                </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">STM32</span>
+                        <span class="tech-tag">Embedded Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    < Skills Section -->
+
+    <!-- Projects Section -->
+<section id="projects" class="projects" data-testid="projects-section">
+    <div class="container">
+        <h2 class="section-title" data-testid="projects-title">Featured Projects</h2>
+        <div class="projects-grid">
+
+            <!-- AWS Internship Project -->
+            <div class="project-card" data-testid="project-aws-internship">
+                <div class="project-icon">
+                    <i class="fab fa-aws"></i>
+                </div>
+                <h3>AWS EC2 Dedicated Hosts Diagnostic Tool</h3>
+                <p class="project-description">
+                    Developed a full-stack internal diagnostic and data retrieval tool for the EC2 Dedicated Hosts engineering and operations teams. 
+                    The application enables fast querying and aggregation of data from multiple backend APIs and services, significantly reducing 
+                    time spent identifying and troubleshooting issues related to host allocation, instance placement, health events, and operational metrics.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Ruby</span>
+                    <span class="tech-tag">YAML</span>
+                    <span class="tech-tag">XML</span>
+                    <span class="tech-tag">Unit & Integration Testing</span>
+                </div>
+                <div class="project-date">June 2025 – August 2025</div>
+            </div>
+
+            <!-- Intellectus Site -->
+            <div class="project-card" data-testid="project-aws-internship">
+                <div class="project-icon">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+
+                <h3>Intellectus Academy Website</h3>
+                <p class="project-description">
+                    Developed a full-stack web applicaiton for a tutoring business that i co-founded with a friend of mine,
+                    this tutoring site helps facilitate bookings , provides extra information about the company and provide students with extra resources to assist with their studies
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">JSON</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <div class="project-date">Jan 2026 – Current</div>
+                 <a  href="https://leigthon.github.io/Intellectus-Academy" class="btn btn-primary" data-testid="hero-contact-btn">View Site</a>
+            </div>
+
+            <!-- Public Transportation Web Application -->
+            <div class="project-card" data-testid="project-transportation">
+                <div class="project-icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <h3>Public Transportation Web Application</h3>
+                <p class="project-description">
+                    Full-stack web application for public transportation management. Implemented backend services in Python 
+                    with RESTful APIs consumed by a React frontend, integrated with SQL database for data persistence and querying.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-date">August 2025 – October 2025</div>
+            </div>
+
+            <!-- Embedded Systems & Image Processing -->
+            <div class="project-card" data-testid="project-embedded">
+                <div class="project-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Embedded Systems & Image Processing</h3>
+                <p class="project-description">
+                    Developed embedded software in C for STM32 microcontrollers, implementing low-level hardware interaction. 
+                    Completed image processing project in C++ focusing on data manipulation, performance optimization, and signal processing concepts.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">C</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">STM32</span>
+                    <span class="tech-tag">Embedded Systems</span>
+                </div>
+                <div class="project-date">2024 – 2025</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="skills" class="skills" data-testid="skills-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="skills-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category" data-testid="skills-languages">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">Java</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">C#</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">TypeScript</div>
+                        <div class="skill-tag">C</div>
+                        <div class="skill-tag">C++</div>
+                    </div>
+                </div>
+                <div class="skill-category" data-testid="skills-frameworks">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks & Tools</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">React</div>
+                        <div class="skill-tag">.NET</div>
+                        <div class="skill-tag">HTML5</div>
+                        <div class="skill-tag">CSS3</div>
+                        <div class="skill-tag">SQL</div>
+                        <div class="skill-tag">REST APIs</div>
+                    </div>
+                </div>
+                <div class="skill-category" data-testid="skills-concepts">
+                    <h3><i class="fas fa-lightbulb"></i> Concepts & Practices</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">Object-Oriented Programming</div>
+                        <div class="skill-tag">Data Structures</div>
+                        <div class="skill-tag">Software Engineering</div>
+                        <div class="skill-tag">Agile Development</div>
+                        <div class="skill-tag">Code Reviews</div>
+                        <div class="skill-tag">Version Control</div>
+                    </div>
+                </div>
+                <div class="skill-category" data-testid="skills-soft">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">Team Collaboration</div>
+                        <div class="skill-tag">Communication</div>
+                        <div class="skill-tag">Problem-Solving</div>
+                        <div class="skill-tag">Adaptability</div>
+                        <div class="skill-tag">Mentoring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education" data-testid="education-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="education-title">Education</h2>
+            <div class="education-card" data-testid="education-uct">
+                <div class="education-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="education-content">
+                    <h3>Bachelor of Science</h3>
+                    <h4>Computer Science & Computer Engineering</h4>
+                    <p class="university">University of Cape Town</p>
+                    <p class="education-date">Expected Completion: 2025 (Results Pending)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-testid="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="contact-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro" data-testid="contact-intro">
+                        I'm currently seeking Junior/Graduate Software Engineer opportunities. 
+                        Feel free to reach out if you'd like to discuss potential collaborations or just want to connect!
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:leigthonmessina2@gmail.com" class="contact-item" data-testid="contact-email">
+                            <i class="fas fa-envelope"></i>
+                            <span>leigthonmessina2@gmail.com</span>
+                        </a>
+                        <a href="tel:+27664661333" class="contact-item" data-testid="contact-phone">
+                            <i class="fas fa-phone"></i>
+                            <span>066 466 1333</span>
+                        </a>
+                        <div class="contact-item" data-testid="contact-location-display">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cape Town, South Africa</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" action="mailto:leigthonmessina2@gmail.com" method="post" enctype="text/plain" data-testid="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required data-testid="contact-form-name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required data-testid="contact-form-email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Your Message" required data-testid="contact-form-message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-testid="contact-form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-testid="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links" data-testid="social-links">
+                    <a href="https://github.com/Leigthon" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="social-github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/leigthon-messina-bb6980256" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="social-linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_leigthon_/" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="social-instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@leigthon_raps" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="social-tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://youtu.be/aIgke3M0iXU" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="social-youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/leigthon.messina.12/" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="social-facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+                <p class="copyright" data-testid="footer-copyright">
+                    &copy; 2025 Leigthon Messina. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
