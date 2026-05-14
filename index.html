@@ -438,7 +438,7 @@
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <form class="contact-form" action="mailto:leigthonmessina2@gmail.com" method="post" enctype="text/plain" data-testid="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/xeenwdnw" method="POST" data-testid="contact-form">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required data-testid="contact-form-name">
                         </div>
@@ -448,6 +448,8 @@
                         <div class="form-group">
                             <textarea name="message" rows="5" placeholder="Your Message" required data-testid="contact-form-message"></textarea>
                         </div>
+                        <!-- Optional: redirect after success -->
+                        <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
                         <button type="submit" class="btn btn-primary" data-testid="contact-form-submit">Send Message</button>
                     </form>
                 </div>
